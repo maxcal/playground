@@ -10,6 +10,10 @@ class AvailableWork < ActiveRecord::Base
     find(ids)
   end
 
+  def self.tag_counts
+    Tag.tag_counts.where(taggings: { tagged_type: self.name  })
+  end
+
   def tag_list
     tags.map(&:name).join(", ")
   end
