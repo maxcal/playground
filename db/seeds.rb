@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+dishes = AvailableWork.create(title: 'Do the dishes')
+dishes.tag_list = 'boring,housework'
+
+
