@@ -5,7 +5,7 @@
       <td><%= available_work.title %></td>
       <td><%= available_work.description.try(:html_safe) %></td>
       <td>Tags: <%= available_work.tag_list %></td>
-      <!--<td><%#= image_tag available_work.image_url(:thumb) %></td>-->
+      <td><%#= image_tag available_work.image_url(:thumb) %></td>
       <td><%= link_to 'Show', available_work %></td>
       <td><%= link_to 'Edit', edit_available_work_path(available_work) %></td>
       <td><%= link_to 'Destroy', available_work, method: :delete, data: { confirm: 'Are you sure?' } %></td>

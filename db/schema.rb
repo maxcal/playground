@@ -38,31 +38,4 @@ ActiveRecord::Schema.define(version: 20150621234032) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "task_participations", force: :cascade do |t|
-    t.integer  "task_id"
-    t.integer  "participant_id"
-    t.boolean  "selected"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-  end
-
-  add_index "task_participations", ["participant_id"], name: "index_task_participations_on_participant_id"
-  add_index "task_participations", ["task_id"], name: "index_task_participations_on_task_id"
-
-  create_table "tasks", force: :cascade do |t|
-    t.integer  "owner_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string   "email"
-    t.string   "nickname"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["nickname"], name: "index_users_on_nickname", unique: true
-
 end
